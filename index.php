@@ -86,7 +86,7 @@ echo \Com\Object::cutStr('title',25,'utf-8','…');
 
 echo $obj;
 
-echo $obj("100块钱");
+echo $obj("100块钱aaa");
 
 
 $db = \Com\Factory::createDb();
