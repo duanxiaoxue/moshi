@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+
+    function Exx(){}
+    Exx.prototype.z = 1;
+    var obj = new Exx();
+
+    console.log(obj instanceof Object);
+    var des = Object.getOwnPropertyDescriptor(Object,'prototype');
+    alert(des);
+</script>
+
+</body>
+</html>
