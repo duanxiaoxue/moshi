@@ -11,12 +11,30 @@
 namespace Com;
 
 
+use com\model\User;
+
 class Factory {
 
     static function createDb()
     {
-        $db = new Database();
+
+        $db = Register::get('db');
+        if(!$db){
+            $db = \Com\Database::getInstance();
+            Register::set('db',$db);
+        }
         return $db;
+    }
+
+    static function createUser($id)
+    {
+        $key = 'user_'.$id;
+        $user = Register::get($key);
+        if(!$user){
+            $user =   new User($id);
+            Register::set($key,$user);
+        }
+        return $user;
     }
 
 }

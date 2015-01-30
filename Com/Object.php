@@ -46,6 +46,6 @@ class Object {
 
     function __invoke($params)
     {
-        return "您传入的是".$params."经过处理后变为！！！";
+        return "给类传参，您传入的是".$params."经过处理后变为！！！";
     }
 }
